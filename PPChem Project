@@ -1,1 +1,9 @@
+from chempy.chemistry import balance_stoichiometry
+from chempy.chemistry import Reaction
+def calcul_coef_stoechio(reactants:list[str], products:list[str]):
+    reac, prod = balance_stoichiometry(reactants, products)
+    return reac, prod
+# Fonction qui calcule les coefficients stoechiométriques d'une réaction chimique donnée sous forme de listes de réactifs et de produits, retourant les coefficients stochiométriques sous forme de dictionaires.
 
+print(Reaction(*balance_stoichiometry(['H2', 'O2'], ['H2O'])).string())
+# Fonction qui calcule les coefficients stoechiométriques d'une réaction chimique donnée sous forme de listes de réactifs et de produits, retournant l'equation chimique équilibrée sous forme de string.
